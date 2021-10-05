@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+/*
+Route::apiResource('Post', 'app\Http\Controllers\API\PostController');
+Route::apiResource('/kojidaicyo', 'KojidaicyoController');
+*/
+
+Route::apiResource('/kojidaicyo', 'App\Http\Controllers\KojidaicyoController');
